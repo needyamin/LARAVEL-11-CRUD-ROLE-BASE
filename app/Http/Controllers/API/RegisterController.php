@@ -13,7 +13,7 @@ use Illuminate\Http\JsonResponse;
 class RegisterController extends Controller
 {
 
-    public function register(Request $request): JsonResponse{
+    public function register(Request $request): JsonResponse {
         // Validation rules
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
@@ -47,9 +47,9 @@ class RegisterController extends Controller
 
 
 
-    public function login(Request $request): JsonResponse{
+    public function login(Request $request): JsonResponse {
 
-        $credentials = $request->only('email', 'password');
+    $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
             // Authentication passed
@@ -70,7 +70,7 @@ class RegisterController extends Controller
     }
 
 
-    protected function sendResponse($result, $message): JsonResponse{
+    protected function sendResponse($result, $message): JsonResponse {
         return response()->json([
             'success' => true,
             'data' => $result,
@@ -79,7 +79,7 @@ class RegisterController extends Controller
     }
 
 
-    protected function sendError($error, $errorMessages = [], $code = 404): JsonResponse{
+    protected function sendError($error, $errorMessages = [], $code = 404): JsonResponse {
         $response = [
             'success' => false,
             'message' => $error,

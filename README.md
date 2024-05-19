@@ -1,2 +1,2 @@
-# LARAVEL-11-CRUD-ROLE-BASE
-LARAVEL 11 CRUD ROLE BASE WITH REST API
+# lara-11-full
+lara-11-full n Final
