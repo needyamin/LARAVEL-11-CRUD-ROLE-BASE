@@ -18,7 +18,7 @@ class AgentApiController extends Controller
             exit;
         }
         
-        $apiUrl = "https://otithee.com/api/OEMSAGENTINFO?phone=" . $phone;
+        $apiUrl = "https://otithee.com/api/" . $phone;
 
         $response = file_get_contents($apiUrl);
         if ($response === false) {
